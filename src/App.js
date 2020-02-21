@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-// import './App.css';
 
 const people = [
   {name: 'Tyler'},
@@ -9,17 +7,33 @@ const people = [
   {name: 'Ernest'}
   ]
 
-function App() {
-  return (
-    <div className="App">
-        <ol>
-          {people.map((person) => (
-          <li key={person.name}>{person.name}</li>
-          ))}
-          </ol>
-      
-    </div>
-  );
+class ContactList extends React.Component{
+  render()  {
+    return(
+      <ol>
+        {people.map((person) => (
+        <li key={person.name}>{person.name}</li>
+        ))}
+        </ol>
+    );
+  
+  }
 }
 
+
+class App extends React.Component{
+  render(){
+    return(
+      <div className="App">
+        <ContactList />
+
+      </div>
+    )
+   
+    
+
+  }
+
+
 export default App;
+
