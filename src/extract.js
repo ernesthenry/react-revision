@@ -33,3 +33,17 @@ function Avatar(props){
         </div>
     )
 }
+
+function UserInfo(props){
+    return(
+        <div className="UserInfo">
+            <Avatar user={props.user}/>
+
+        </div>
+
+        <div className="UserInfor-name">
+            {props.user.name}
+
+        </div>
+    )
+}
