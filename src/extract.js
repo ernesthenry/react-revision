@@ -7,10 +7,7 @@ function Commment(props){
     return(
         <div className="Comment">
             <div className="UserInfo">
-                <img 
-                    src={props.author.avatarUrl}
-                    alt={props.author.name}
-                    />
+                <Avatar user = {props.user} />
                 <div className="UserInfo-name">
                     {props.author.name}
                 </div>
@@ -24,4 +21,15 @@ function Commment(props){
             </div>
         </div>
     );
+}
+
+function Avatar(props){
+    return(
+        <div className="Avatar">
+            <img 
+            src={props.user.avatarUrl}
+            alt={props.user.name}
+            />
+        </div>
+    )
 }
