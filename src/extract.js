@@ -7,10 +7,7 @@ function Commment(props){
     return(
         <div className="Comment">
             <div className="UserInfo">
-                <Avatar user = {props.author} />
-                <div className="UserInfo-name">
-                    {props.author.name}
-                </div>
+                <UserInfo user = {props.author} />
             </div>
             <div className="Comment-text">
                 {props.text}
